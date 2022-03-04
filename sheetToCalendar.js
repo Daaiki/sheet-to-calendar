@@ -17,13 +17,8 @@ function createSchedule() {
   // 連携するアカウント
   const calendarId = CALENDAR_ID; 
 
-  // 現在日時の取得
-  const currentDay = new Date()
-  const currentYear = currentDay.getFullYear()
-  const currentMonth = currentDay.getMonth() + 1
-
   // シートを取得
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(`${currentYear}年${currentMonth}月`);
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 
   // メンバー数を取得
   const memberNum = Math.floor((sheet.getLastRow() - 1) / 6)
