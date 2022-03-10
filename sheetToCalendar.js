@@ -14,7 +14,7 @@ function onOpen() {
 
 function createSchedule() {
 
-  // 連携するアカウント
+  // 連携するカレンダーのID
   const calendarId = CALENDAR_ID; 
 
   // シートを取得
